@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+char code[5] = {'a','b','c','d','e'};
+float discount[5] = {0.25 , 0.10 , 0.20 , 0.30, 0.50};
+
+int index_checker(char c)
+{
+	for(int i=0 ; i<5 ; i++)	
+	{
+		if(c==code[i])
+		{
+			return i;
+		}
+	}
+}	
+    
+float discount_calculator(int idx , int p)
+{
+	float totle_price;
+		
+			float dis=p*discount[idx];
+		 totle_price = p-dis;
+		 return totle_price;
+		
+	}
+	
+	
+	
+
+main()
+{
+    int item,price;
+	char code;
+    cout<<"Enter the price....";
+    cin>>price;
+    cout<<"Enter the code.....";
+    cin>>code;
+    int index=index_checker(code);
+    float D=discount_calculator( index , price);
+    cout<<"Discount is...."<<D;
+    
+}
+
+
+

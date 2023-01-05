@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+void parallel_array(int size)
+{
+    int roll[size] , age[size];
+    for(int i=0 ; i<size ; i++)
+    {
+        cout<<"ROLL NO....";
+        cin>>roll[i];
+        cout<<"AGES.......";
+        cin>>age[i];
+        cout<<"\n";
+    }
+
+    cout<<"\n";
+    cout<<"ROLL NO"<<"\t"<<"AGE";
+    cout<<"\n";
+    for(int i=0 ; i<size ; i++)
+    {
+        cout<<roll[i]<<"\t"<<age[i]<<endl;
+    }
+}
+main()
+{
+    int n;
+    cout<<"Enter size of array...";
+    cin>>n;
+    parallel_array(n);
+}
+
+
+
+
+
+
+
+
+
